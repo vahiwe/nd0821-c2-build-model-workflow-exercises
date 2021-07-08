@@ -38,7 +38,10 @@ Hints:
 3. You do NOT need to generate the profiles from pandas-profiling (and you also do not need
    pandas-profiling as a dependency in ``conda.yml``)
 4. Save the cleaned data in a new artifact on W&B called ``preprocessed_data.csv``
-5. We are going to use the created artifact several times in the following exercises. Verify that
+5. Run with ``mlflow run . -P input_artifact="exercise_4/genres_mod.parquet:latest" \
+   -P artifact_name="preprocessed_data.csv" -P artifact_type="clean_data" \
+   -P artifact_description="Data after preprocessing"``
+6. We are going to use the created artifact several times in the following exercises. Verify that
    you have an artifact called ``preprocessed_data.csv`` under the project ``exercise_5``, so the
    following command works:
    ```bash
