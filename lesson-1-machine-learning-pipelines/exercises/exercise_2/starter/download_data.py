@@ -46,8 +46,6 @@ def go(args):
             logger.info("Logging artifact")
             run.log_artifact(artifact)
 
-            # This makes sure that the artifact is uploaded before the
-            # tempfile is destroyed
             artifact.wait()
 
 
